@@ -24,7 +24,6 @@
 }
 
 body {
-	width: 1600px;
 	font-family: "Roboto", sans-serif;
 	color: #212121;
 	background-color: #ffffff;
@@ -67,10 +66,7 @@ img {
 	height: auto;
 }
 /*  =========================HEDER=========================  */
-.heder {
-	padding-top: 24px;
-	padding-bottom: 25px;
-}
+
 .heder-conteiner {
 	display: flex;
 	align-items: center;
@@ -89,11 +85,14 @@ img {
 }
 
 .nav-link {
+	display: block;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: calc(16 / 14);
 	letter-spacing: 0.02em;
 	color: #212121;
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -106,7 +105,7 @@ img {
 }
 .hedern-nav-list {
 	display: flex;
-	gap: 30px;
+	gap: 50px;
 }
 .heder-list {
 	display: flex;
@@ -190,7 +189,7 @@ img {
 	display: flex;
 }
 .secondary-list-item {
-	width: 270px;
+	flex-basis: calc((100%-30px * 3) / 4);
 }
 .secondary-list-item:not(:last-child) {
 	margin-right: 30px;
@@ -225,12 +224,16 @@ img {
 	text-align: center;
 	margin-bottom: 50px;
 }
+.about-list-item {
+	padding-bottom: 94px;
+}
 /* comanda */
 .comanda {
 	background-color: #f5f4fa;
 }
 .comanda-list {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 30px;
 }
 .comanda-title {
@@ -243,6 +246,7 @@ img {
 }
 .comanda-item-list {
 	background-color: #ffffff;
+	flex-basis: calc((100% - 30px * 3) / 4);
 }
 .comanda-sub-title {
 	font-weight: 500;
@@ -368,7 +372,7 @@ img {
 	color: var(--portfolio-btn-color-hover-focus);
 }
 .portfolio-item-list {
-	width: 370px;
+	flex-basis: calc((100% - 30px * 2) / 3);
 }
 .portfolio-title {
 	font-weight: 700;
@@ -377,14 +381,12 @@ img {
 	letter-spacing: 0.06em;
 	color: var(--portfolio-title);
 	margin-bottom: 4px;
-	width: 322px;
 }
 .portfolio-text {
 	font-size: 16px;
 	line-height: calc(30 / 16);
 	letter-spacing: 0.03em;
 	color: var(--portfolio-text);
-	width: 322px;
 }
 
 .sub-border {
