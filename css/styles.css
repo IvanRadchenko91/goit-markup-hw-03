@@ -4,11 +4,11 @@
 	--nav-link-hover-focus: #2196f3;
 	--heder-mail-tel: #757575;
 	--heder-mail-tel-hover-focus: #2196f3;
-	--main-background-color: #212121;
+	--main-background-color: #2f303a;
 	--main-title: #ffffff;
 	--main-text-btn-color: #ffffff;
-	--main-btn-background-color: #2196F3;;
-	--main-btn-background-color-hover-focus: #188CE8;
+	--main-btn-background-color: #2196f3;
+	--main-btn-background-color-hover-focus: #188ce8;
 	--secondary-text-color: #757575;
 	--footer-background-color: #2f303a;
 	--footer-logo: #2196f3;
@@ -22,18 +22,59 @@
 	--portfolio-btn-background-hover-focus: #2196f3;
 	--portfolio-text: #757575;
 }
+
 body {
+	width: 1600px;
 	font-family: "Roboto", sans-serif;
 	color: #212121;
 	background-color: #ffffff;
 }
+.conteiner {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	/* outline: 2px solid rgb(153, 51, 51); */
+}
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+/* reset start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+	margin: 0;
+}
 .list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 .link {
 	text-decoration: none;
+	color: currentColor;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 /*  =========================HEDER=========================  */
+.heder {
+	padding-top: 24px;
+	padding-bottom: 25px;
+}
+.heder-conteiner {
+	display: flex;
+	align-items: center;
+}
 .heder-logo {
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
@@ -41,6 +82,7 @@ body {
 	line-height: calc(31 / 26);
 	letter-spacing: 0.03em;
 	color: var(--heder-logo-color);
+	margin-right: 93px;
 }
 .heder-logo-part {
 	color: var(--heder-logo-color-sub);
@@ -62,7 +104,15 @@ body {
 
 	color: var(--nav-link-hover-focus);
 }
-
+.hedern-nav-list {
+	display: flex;
+	gap: 30px;
+}
+.heder-list {
+	display: flex;
+	margin-left: auto;
+	gap: 50px;
+}
 .heder-mail-link {
 	font-weight: 500;
 	font-size: 14px;
@@ -96,6 +146,8 @@ body {
 /*  =========================MAIN=========================  */
 .main {
 	background-color: var(--main-background-color);
+	padding-top: 200px;
+	padding-bottom: 200px;
 }
 .main-title {
 	font-family: "Roboto";
@@ -106,8 +158,13 @@ body {
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	color: var(--main-title);
+	margin-bottom: 30px;
+	width: 696px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .main-btn {
+	display: block;
 	font-family: inherit;
 	font-weight: 700;
 	font-size: 16px;
@@ -117,6 +174,11 @@ body {
 	background: var(--main-btn-background-color);
 	border-radius: 4px;
 	border-color: transparent;
+	padding: 10px 32px;
+	min-width: 216px;
+	min-height: 50px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .main-btn:hover,
 .main-btn:focus {
@@ -124,12 +186,23 @@ body {
 }
 /* secondary */
 
+.secondary-list {
+	display: flex;
+}
+.secondary-list-item {
+	width: 270px;
+}
+.secondary-list-item:not(:last-child) {
+	margin-right: 30px;
+}
+
 .secondary-sub-title {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: calc(16 / 14);
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 .secondary-text {
 	font-weight: 400;
@@ -139,16 +212,26 @@ body {
 	color: var(--secondary-text-color);
 }
 /*  about  */
+
+.about-list {
+	display: flex;
+	gap: 30px;
+}
 .about-title {
 	font-weight: 700;
 	font-size: 36px;
 	line-height: calc(42 / 36);
 	letter-spacing: 0.03em;
 	text-align: center;
+	margin-bottom: 50px;
 }
 /* comanda */
 .comanda {
 	background-color: #f5f4fa;
+}
+.comanda-list {
+	display: flex;
+	gap: 30px;
 }
 .comanda-title {
 	font-weight: 700;
@@ -156,8 +239,9 @@ body {
 	line-height: calc(42 / 36);
 	letter-spacing: 0.03em;
 	text-align: center;
+	margin-bottom: 50px;
 }
-.comanda-item-list{
+.comanda-item-list {
 	background-color: #ffffff;
 }
 .comanda-sub-title {
@@ -167,6 +251,8 @@ body {
 	letter-spacing: 0.03em;
 	color: var(--secondary-sub-title-color);
 	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
 .comanda-text {
 	font-weight: 400;
@@ -175,6 +261,7 @@ body {
 	letter-spacing: 0.03em;
 	color: var(--secondary-text-color);
 	text-align: center;
+	padding-bottom: 30px;
 }
 
 /*  =========================MAIN=========================  */
@@ -184,18 +271,30 @@ body {
 }
 .footer {
 	background-color: var(--footer-background-color);
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 .footer-logo {
+	display: inline-block;
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
 	font-size: 26px;
 	line-height: calc(31 / 26);
 	letter-spacing: 0.03em;
 	color: var(--footer-logo);
+	margin-bottom: 20px;
 }
 
 .footer-logo-part {
 	color: var(--footer-logo-part);
+	margin-bottom: 20px;
+	display: inline-block;
+}
+.footer-map-item {
+	margin-bottom: 9px;
+}
+.footer-mail-item {
+	margin-bottom: 9px;
 }
 
 .footer-map-link {
@@ -230,8 +329,19 @@ body {
 }
 /*  =========================FOOTER=========================  */
 /*  =========================MAIN PORTFOLIO=========================  */
-
+.main-list-btn {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.portfolio-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
 .portfolio-btn {
+	display: block;
 	cursor: pointer;
 	font-family: inherit;
 	background: var(--portfolio-btn-background);
@@ -243,6 +353,7 @@ body {
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--portfolio-btn-color);
+	padding: 6px 22px;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
@@ -256,17 +367,28 @@ body {
 	letter-spacing: 0.03em;
 	color: var(--portfolio-btn-color-hover-focus);
 }
-
+.portfolio-item-list {
+	width: 370px;
+}
 .portfolio-title {
 	font-weight: 700;
 	font-size: 18px;
 	line-height: calc(36 / 18);
 	letter-spacing: 0.06em;
 	color: var(--portfolio-title);
+	margin-bottom: 4px;
+	width: 322px;
 }
 .portfolio-text {
 	font-size: 16px;
 	line-height: calc(30 / 16);
 	letter-spacing: 0.03em;
 	color: var(--portfolio-text);
+	width: 322px;
+}
+
+.sub-border {
+	padding: 20px 24px;
+	border: 1px solid #eeeeee;
+	border-top: none;
 }
